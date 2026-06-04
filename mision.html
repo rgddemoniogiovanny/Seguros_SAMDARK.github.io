@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="icon" href="logo/imgrino1.jpg" type="image/jpg">
+    <title>Seguros SAMDARK</title>
+    <style>
+        *{
+            font-family: Roboto;
+        }
+        header {
+            position: relative;
+            background-color: black;
+            height: 75vh;
+            min-height: 25rem;
+            width: 100%;
+            overflow: hidden;
+            }
+
+        header video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        header .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        header .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            opacity: 0.5;
+            z-index: 1;
+        }
+
+        #center { width: 800px; margin: 0 auto; }
+            /* Media Query for devices withi coarse pointers and no hover functionality */
+
+            /* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+
+        @media (pointer: coarse) and (hover: none) {
+            header {
+                background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+            }
+
+            header video {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+  div {
+    flex-direction: column; /* Cambia de horizontal a vertical en móviles */
+    text-align: center;
+  }
+}
+
+/*.navbar-custom {
+    background-color: #000000 !important;  Negro puro 
+}
+
+ Opcional: Cambiar el color de los links al pasar el mouse 
+.navbar-custom .nav-link:hover {
+    color: #00ff15 !important;  Un verde neón como el de tu efecto burst 
+}*/
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100;
+    margin: 0;
+    background: #1a1a1a;
+    font-family: 'Arial', sans-serif;
+}
+
+.hover-container {
+    display: inline-block;
+    position: relative;
+}
+
+.explosive-text {
+    font-size: 3rem;
+    color: #fff;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease-out;
+}
+
+.explosive-text:hover {
+    transform: scale(1.1);
+}
+
+.explosive-text:hover::before,
+.explosive-text:hover::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: burst 0.8s ease-out forwards;
+}
+
+.explosive-text:hover::before {
+    background: radial-gradient(circle, rgba(0, 255, 21, 0.6), transparent);
+    z-index: -1;
+}
+
+.explosive-text:hover::after {
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.6), transparent);
+    z-index: -2;
+}
+
+@keyframes burst {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    70% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 mx-auto">
+
+
+            <header>
+
+            <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+            <div class="overlay"></div>
+
+            <!-- The HTML5 video element that will create the background video on the header -->
+            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+              <source src="videos/INTRO.mp4" type="video/mp4">
+            </video>
+
+            <!-- The header content -->
+            <div class="container h-100">
+              <div class="d-flex h-100 text-center align-items-center">
+                <div class="w-100 text-white">
+                  <h1 class="display-3">
+                     <img src="logo/img.gif" class="img-fluid animate__animated animate__rotateInDownLeft"  alt="logoTuvsa" style="width: 400px;"> 
+                  </h1>
+                  <br>
+                </div>
+              </div>
+            </div>
+
+            </header>
+                
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="container-fluid">
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio </a>
+                          </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Nosotros
+                            </a>
+                           <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="nosotros.html">Nosotros</a></li>
+                              <li><a class="dropdown-item" href="mision.html">Misión / Visión</a></li>
+                            </ul> 
+                          </li>
+                          <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Nuestras sedes
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="sedes.html">Sedes</a></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Contactos
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="contactos.html">Contactos</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                        
+                      </div>
+                    </div>
+                </nav>
+                <!-- header -->
+                
+                <!-- header -->
+                <br>
+                <br>
+                <br>
+                <div id="center">
+                <div class="hover-container">
+                    <h2 class="explosive-text" style="color: white;">Misión</h2>
+                </div>
+                <h6 style="color: white;">Erradicar el riesgo mediante la protección inteligente de datos, existimos para ser el escudo definitivo contra el hacking, asegurando que ninguna amenaza externa detenga el progreso y la sobrerania informativa de las empresas a nivel global.</h6>
+                <br>
+                <div class="hover-container">
+                    <h3 class="explosive-text" style="color: white;">¿Porque Elegirnos?</h3>
+                </div>
+                <h6 style="color: white;">En un entorno digital donde las amenazas evolucionan cada segundo, la pregunta no es si habrá un intento de ataque, si no cuándo sucederá. Elegirnos significa convertir esa incertidumbre en una ventana estratégica.</h6>
+                <ol start="1" style="color: white;">
+                <ul style="list-style-type: square;">
+                <li><h5 style="color: white;">Especialización de Élite en Ciberseguridad</h5></li>
+                <h6 style="color: white;">A diferencia de los seguros generales, nosotros no solo cubrimos el riesgo, lo entendemos.</h6>
+                <h6 style="color: white;">Contamos con un equipo de expertos dedicados exclusivamente a la arquitectura de defensa contra hacking, manteniéndonos siempre un paso adelante de los vectores de ataque más recientes</h6>
+                <li><h5 style="color: white;">Blindaje Integral de Datos</h5></li>
+                <h6 style="color: white;">Protegemos el activo más critico de su empresa: la información. Nuestro enfoque no se limita a la detección; Implementamos capas de seguridad que garantizan la integridad, Confidencialidad y disponibilidad de sus bases de datos en cualquier parte del mundo</h6>
+                <li><h5 style="color: white;">Continuidad Operativa Garantizada</h5></li>
+                <h6 style="color: white;">Un ciber-ataque puede paralizar una empresa por semanas. Con Seguros SAMDARK, la prioridad es la resilencia . Nuestros protocolos están diseñados para neutralizar la amenza y restaurar la operatividad en tiempo récord, minimizando el impacto económico y reputacional</h6>
+                </ul>
+                </ol>
+                </div>
+                <div id="center">
+                    <div class="hover-container">
+                        <h2 class="explosive-text" style="color: white;">Visión</h2>
+                    </div>
+                    <h6 style="color: white;">En Seguros SAMDARK nuestra fuerza de vanguardista en la defensa de activos digitales, integrando inteligencia avanzada y respuesta proactiva para neutralizar ataques de red antes de que sucedan. Nuestra visión es liderar un futuro donde la conectividad no comprometa la integridad, permitiendo que las organizaciones evolucionen sin límites en un entorno digital seguro.</h6>
+                    <br>
+                    <br>
+                    <h5 style="color: white;">Seguros SAMDARK te protege, y cuidamos tus equipos, dando seguridad a tu red, en Seguros SAMDARK no te dejamos solo, te apoyamos para que este seguro tu información digital, dandote la mejor atención y la calidad en Seguros SAMDARK</h5>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                </footer>
+            </div>
+
+          </div>
+          
+          <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+</body>
+</html>
